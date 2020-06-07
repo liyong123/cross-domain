@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B</title>
+</head>
+<body>
+    <span>B</span>
+    <script>
+        /* 监听A发过来的信息 */
+        window.onmessage= function(ev) {
+            console.log(ev.data)
+            /*ev.source代表A, 拿到信息做处理，再发给A */
+            ev.source.postMessage(ev.data + 'B->A', 'http://127.0.0.1:1001/')
+        }
+    </script>
+</body>
+</html>
