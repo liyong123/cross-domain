@@ -13,3 +13,10 @@ app.get('/getTest', (req, res) => {
     }
     res.send(`${JSON.stringify(data)}`)
 });
+app.post('/postTest', (req, res) => {
+    const data = {
+        code: 0,
+        data: 'Got a post request!'
+    }
+    res.send(`${JSON.stringify(data)}`)
+});

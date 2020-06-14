@@ -40,11 +40,19 @@ app.get('/list', (req, res) => {
     res.send(`${callback}(${JSON.stringify(data)})`) //data转化为字符串
 
 })
-/* 响应axios请求 */
+/* 响应axios的get请求 */
 app.get('/getTest', (req, res) => {
     const data = {
         code: 0,
         data: 'Got a GET request!'
     }
     res.send(`${JSON.stringify(data)}`)
-});
+})
+/* 响应axios的post请求 */
+app.post('/postTest', (req, res) => {
+    const data = {
+        code: 0,
+        data: 'Got a post request!'
+    }
+    res.send(`${JSON.stringify(data)}`)
+})
